@@ -195,7 +195,6 @@ vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|458dd241f5f8536eccb
 vendor/lib64/libwvhidl.so|a3444ac0deb8144a08ba2ed1dad2f2369096c7af
 
 # FM Radio - from Sakura MIUI PIE RELEASE
-vendor/bin/fm_qsoc_patches|b7fc7406c7d6096841498a8bc0f09901cf6f855f
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|dc576dfcb0bf390a106b5ed8861e7f547110cbf1
 
 # Gatekeeper - from Sakura MIUI PIE RELEASE
