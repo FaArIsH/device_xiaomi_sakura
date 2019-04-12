@@ -98,6 +98,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -180,7 +181,7 @@ TARGET_USES_MKE2FS := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_HAS_NO_WLAN_STATS := true
+TARGET_HAS_NO_WIFI_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_wakeup_gesture"
 
 # Qualcomm
