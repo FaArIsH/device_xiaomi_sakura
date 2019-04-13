@@ -21,18 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sakura device
 $(call inherit-product, device/xiaomi/sakura/device.mk)
 
-$(call inherit-product, vendor/revengeos/config/common.mk)
-$(call inherit-product, vendor/revengeos/config/gsm.mk)
+# $(call inherit-product, vendor/pa/config/common.mk)
 
-# Inherit some common AOSP stuff.
-TARGET_GAPPS_ARCH := arm64
+# platform related stuff
+#TARGET_WANTS_EXTENDED_DPM_PLATFORM := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_USES_AOSP := false
+TARGET_USES_QCOM_BSP := false
+# Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
-IS_PHONE := true
-REVENGEOS_BUILDTYPE := UNOFFICIAL
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sakura
-PRODUCT_NAME := revengeos_sakura
+PRODUCT_NAME := pa_sakura
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 6 Pro
 PRODUCT_MANUFACTURER := Xiaomi

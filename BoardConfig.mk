@@ -38,19 +38,20 @@ TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := sakura_defconfig
+TARGET_KERNEL_CONFIG := sakura-perf_defconfig
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953-4.9
 TARGET_KERNEL_VERSION := 4.9
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Audio
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_AUDIOSPHERE := true
@@ -94,6 +95,9 @@ TARGET_TS_MAKEUP := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+#EAP proxy
+DISABLE_EAP_PROXY := true
+
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -115,6 +119,7 @@ endif
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # Display
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
@@ -164,6 +169,7 @@ TARGET_INIT_VENDOR_LIB := libinit_msm8953
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8953
 
 # Media
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Partitions
