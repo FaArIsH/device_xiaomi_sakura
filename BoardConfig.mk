@@ -50,8 +50,9 @@ TARGET_KERNEL_VERSION := 4.9
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
-# Audio
+#Audio
 TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
+AUDIO_FEATURE_ENABLED_SND_MONITOR := true
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_AUDIOSPHERE := true
@@ -187,7 +188,8 @@ TARGET_USES_MKE2FS := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_HAS_NO_WIFI_STATS := true
+TARGET_HAS_NO_WLAN_STATS := true
+TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_wakeup_gesture"
 
 # Qualcomm
@@ -210,7 +212,7 @@ TARGET_USE_OLD_MNC_FORMAT := true
 VENDOR_SECURITY_PATCH := 2019-02-01
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+# include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # We modify several neverallows, so let the build proceed
