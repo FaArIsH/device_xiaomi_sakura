@@ -179,7 +179,7 @@ TARGET_USES_MKE2FS := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_HAS_NO_WLAN_STATS := true
+TARGET_HAS_NO_WIFI_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_wakeup_gesture"
 
 # Qualcomm
