@@ -21,12 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sakura device
 $(call inherit-product, device/xiaomi/sakura/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+# Inherit some common RevengeOS stuff.
+$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/revengeos/config/gsm.mk)
+
+# Inherit some common AOSP stuff.
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+IS_PHONE := true
+REVENGEOS_BUILDTYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sakura
-PRODUCT_NAME := dot_sakura
+PRODUCT_NAME := revengeos_sakura
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 6 Pro
 PRODUCT_MANUFACTURER := Xiaomi
@@ -41,5 +48,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/sakura/sakura:9/PKQ1.180917.001/V10.3.1.0.PDICNXM:user/release-keys"
 
-# Set BootAnimation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
+# Use Gcam and Jelly
+TARGET_USE_GCAM := true
