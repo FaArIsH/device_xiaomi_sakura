@@ -33,7 +33,7 @@ REVENGEOS_BUILDTYPE := OFFICIAL
 
  # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := revengeos_sakura
-PRODUCT_DEVICE := daisy
+PRODUCT_DEVICE := sakura
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 6 Pro
 PRODUCT_MANUFACTURER := Xiaomi
